@@ -51,5 +51,10 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "angular-jest-cva-directive"
+  "defaultProject": "angular-jest-cva-directive",
+  "analytics": false,
+  "migrate": {
+    "agentic": true
+  },
+  "neverConnectToCloud": true
 }
