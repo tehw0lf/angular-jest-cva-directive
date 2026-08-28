@@ -7,13 +7,14 @@ import { StuffService } from './stuff.service';
 import { TestDirective } from './test.directive';
 
 @Component({
+  imports: [FormsModule, TestDirective],
   template: `
     <form #form="ngForm">
       <input
         id="input"
         name="test"
         [(ngModel)]="modelValue"
-        someDirectiveSelector
+        appSomeDirectiveSelector
       />
     </form>
   `,
@@ -33,8 +34,7 @@ describe('TestDirective', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TestHostComponent, TestDirective],
-      imports: [FormsModule],
+      imports: [TestHostComponent, TestDirective, FormsModule],
       providers: [{ provide: StuffService, useValue: mockStuffService }],
     }).compileComponents();
 
