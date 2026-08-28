@@ -4,7 +4,7 @@ import { ControlValueAccessor } from '@angular/forms';
 import { StuffService } from './stuff.service';
 
 @Directive({
-  selector: '[someDirectiveSelector]',
+  selector: '[appSomeDirectiveSelector]',
 })
 export class TestDirective implements ControlValueAccessor {
   onChange!: any;
