@@ -12,7 +12,7 @@ export class TestDirective implements ControlValueAccessor {
   constructor(
     private renderer: Renderer2,
     private element: ElementRef,
-    private stuffService: StuffService
+    private stuffService: StuffService,
   ) {}
 
   @HostListener('input', ['$event.target.value'])
@@ -24,7 +24,7 @@ export class TestDirective implements ControlValueAccessor {
     this.renderer.setProperty(
       element,
       'value',
-      this.stuffService.format(value)
+      this.stuffService.format(value),
     );
   }
 
