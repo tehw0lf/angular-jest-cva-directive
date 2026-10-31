@@ -1,6 +1,7 @@
 {
   "name": "angular-jest-cva-directive",
   "$schema": "node_modules/nx/schemas/project-schema.json",
+  "includedScripts": [],
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "./src",
@@ -59,6 +60,9 @@
         "development": {
           "buildTarget": "angular-jest-cva-directive:build:development"
         }
+      },
+      "readyWhen": {
+        "signal": true
       }
     },
     "extract-i18n": {
